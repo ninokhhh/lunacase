@@ -1,0 +1,940 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(180deg, #EDE7F6 0%, #FFFFFF 100%);
+  color: #4B2E83;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", serif;
+  color: #3A1E6E;
+  margin-top: 0;
+}
+
+a {
+  color: #4B2E83;
+  text-decoration: none;
+}
+a:hover {
+  color: #3A1E6E;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #f9f7fb;
+  padding: 20px 50px;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.header .left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.header .left .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header .left .logo img {
+  width: 30px;
+  height: 30px;
+}
+.header .left .logo .brand {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #4d3c6b;
+}
+.header .left .nav {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.header .left .nav a {
+  font-size: 18px;
+  font-weight: 600;
+  color: #4d3c6b;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.header .left .nav a:hover {
+  color: #7b5ca5;
+}
+.header .right-side {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.header .right-side .icons {
+  display: flex;
+  gap: 25px;
+}
+.header .right-side .icons .icon-with-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: #4b2e83;
+}
+.header .right-side .icons .icon-with-label img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease;
+}
+.header .right-side .icons .icon-with-label img:hover {
+  transform: scale(1.1);
+}
+.header .right-side .icons .icon-with-label span {
+  margin-top: 4px;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 16px 30px;
+  }
+  .header .left {
+    gap: 30px;
+  }
+  .header .left .nav {
+    gap: 24px;
+  }
+  .header .left .nav a {
+    font-size: 16px;
+  }
+  .header .right-side .icons {
+    gap: 20px;
+  }
+  .header .right-side .icons .icon-with-label {
+    font-size: 11px;
+  }
+  .header .right-side .icons .icon-with-label img {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    padding: 12px 20px;
+  }
+  .header .container {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .header .left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .header .left .nav {
+    gap: 16px;
+  }
+  .header .left .nav a {
+    font-size: 15px;
+  }
+  .header .left .logo {
+    gap: 8px;
+  }
+  .header .left .logo .brand {
+    font-size: 20px;
+  }
+  .header .left .logo img {
+    width: 26px;
+    height: 26px;
+  }
+  .header .right-side {
+    width: 100%;
+  }
+  .header .right-side .icons {
+    width: 100%;
+    gap: 16px;
+    justify-content: space-between;
+  }
+  .header .right-side .icons .icon-with-label {
+    font-size: 11px;
+  }
+  .header .right-side .icons .icon-with-label img {
+    width: 44px;
+    height: 44px;
+  }
+}
+@media (max-width: 480px) {
+  .header {
+    padding: 10px 16px;
+  }
+  .header .left .nav {
+    gap: 12px;
+  }
+  .header .left .nav a {
+    font-size: 14px;
+  }
+  .header .right-side .icons {
+    gap: 12px;
+  }
+  .header .right-side .icons .icon-with-label {
+    font-size: 10px;
+  }
+  .header .right-side .icons .icon-with-label img {
+    width: 38px;
+    height: 38px;
+  }
+}
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+footer {
+  background-color: #fdfcfe;
+  color: #3b2164;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid #ececec;
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-content h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #4c2a85;
+}
+
+.footer-tagline {
+  font-size: 13px;
+  margin: 8px 0 20px;
+  color: #937fbf;
+}
+
+.footer-nav {
+  margin: 15px 0;
+}
+
+.footer-nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #4c2a85;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #6f4fc2;
+}
+
+.footer-socials {
+  margin: 20px 0 15px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #4c2a85;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #6f4fc2;
+  text-decoration: underline;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.footer-copy {
+  margin-top: 25px;
+  font-size: 12px;
+  color: #999;
+}
+
+.footer-made {
+  font-size: 12px;
+  color: #c1a9e8;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+.footer-socials a:hover .icon {
+  opacity: 0.8;
+}
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+.hero {
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/first.PNG") center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  background-color: white;
+  padding: 60px 70px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  width: 100%;
+  text-align: left;
+}
+.hero-content h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #4b2e83;
+  margin-bottom: 16px;
+}
+.hero-content p {
+  font-size: 18px;
+  color: #4b2e83;
+  margin-bottom: 30px;
+}
+.hero-content .btn {
+  font-size: 18px;
+  padding: 12px 32px;
+  background-color: #4b2e83;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.hero-content .btn:hover {
+  background-color: #311e56;
+}
+.hero-content .btn:active {
+  background-color: #563596;
+}
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  background-color: #faf8fc;
+  color: #2d2d2d;
+}
+
+.about-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #5e44f4;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.founder-photo {
+  width: 100%;
+  max-height: 400px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.about-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1d1d1d;
+}
+
+.about-highlight {
+  font-size: 20px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.about-text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.connect-section {
+  background-color: #f3f0fa;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.connect-section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.connect-section a {
+  color: #5e44f4;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+.connect-section a:hover {
+  color: #3d2ac4;
+  text-decoration: underline;
+}
+
+.connect-section i {
+  margin-right: 6px;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+.reviews-section h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #1d1d1d;
+}
+
+.review {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.review p {
+  font-size: 17px;
+  margin: 0 0 5px 0;
+}
+
+.review span {
+  color: #777;
+  font-size: 15px;
+}
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+.wishlist-carousel-section {
+  background: #f8f5fc;
+  padding: 60px 0;
+}
+.wishlist-carousel-section .carousel {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.wishlist-carousel-section .carousel img {
+  border-radius: 12px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 480px;
+}
+.wishlist-carousel-section .carousel-control-prev-icon,
+.wishlist-carousel-section .carousel-control-next-icon {
+  background-color: #9f7aea;
+  border-radius: 50%;
+}
+.wishlist-carousel-section .wishlist-form {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.wishlist-carousel-section .wishlist-form .phone-input {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+.wishlist-carousel-section .wishlist-form .btn-buy {
+  background-color: #6b21a8;
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+.wishlist-carousel-section .wishlist-form .btn-buy:hover {
+  background-color: #581c87;
+}
+
+.wishlist-heading {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  color: #6b21a8;
+  margin-bottom: 30px;
+}
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+.register-page {
+  background-color: #f6f4fa;
+}
+.register-page .main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: calc(100vh - 250px);
+  background-color: #f6f4fa;
+}
+.register-page .form-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  max-width: 400px;
+}
+.register-page .form-container .register-header {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+.register-page .form-container h2 {
+  text-align: center;
+  color: #4b2e83;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.register-page .form-container form {
+  display: flex;
+  flex-direction: column;
+}
+.register-page .form-container form input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.register-page .form-container form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  background-color: #4b2e83;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.register-page .form-container form button:hover {
+  background-color: #3c2570;
+}
+.register-page .form-container .login-link {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 13px;
+}
+.register-page .form-container .login-link a {
+  color: #4b2e83;
+  text-decoration: none;
+}
+
+.back-btn {
+  font-size: 28px;
+  font-weight: 700;
+  color: #4b2e83;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+body {
+  background: #f4ebff;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.cart-container {
+  max-width: 500px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #6c2bd9;
+  font-size: 16px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.cart-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #2b2b2b;
+  margin-bottom: 30px;
+}
+
+.carousel-inner img {
+  border-radius: 15px;
+  height: 420px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #b48cf4;
+  border-radius: 50%;
+  background-size: 60% 60%;
+}
+
+.case-info {
+  margin-top: 25px;
+}
+
+.case-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.case-name {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.case-price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+.form-control {
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  padding: 10px 14px;
+  box-shadow: none;
+}
+.form-control:focus {
+  border-color: #6c2bd9;
+  box-shadow: 0 0 0 0.15rem rgba(108, 43, 217, 0.25);
+}
+
+.case-footer {
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.total-price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.continue-link {
+  color: #6c2bd9;
+  text-decoration: none;
+  font-weight: 500;
+}
+.continue-link:hover {
+  text-decoration: underline;
+}
+
+.checkout-btn {
+  background-color: #6c2bd9;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+.checkout-btn:hover {
+  background-color: #5819b4;
+}
+
+@media (max-width: 576px) {
+  .cart-container {
+    padding: 20px;
+  }
+  .carousel-inner img {
+    height: 300px;
+  }
+  .checkout-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .case-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+.product-section {
+  background-color: #f6f2fa;
+  padding: 70px 0 50px;
+  text-align: center;
+}
+
+.product-title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #6b408f;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.container.product-grid {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  padding: 0 30px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.case-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #222;
+  text-align: left;
+}
+
+.case-description {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 10px;
+  min-height: 38px;
+  text-align: left;
+}
+
+.features {
+  list-style: none;
+  padding-left: 0;
+  font-size: 13px;
+  color: #777;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.price-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.price {
+  font-size: 15px;
+  font-weight: 600;
+  color: #6b408f;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icons img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .container.product-grid {
+    grid-template-columns: repeat(3, 1fr);
+    -ms-grid-columns: 1fr 32px 1fr 32px 1fr;
+  }
+}
+@media (max-width: 900px) {
+  .container.product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: 1fr 32px 1fr;
+    gap: 24px;
+    padding: 0 20px;
+  }
+  .case-title {
+    font-size: 14px;
+  }
+  .case-description {
+    font-size: 12px;
+    min-height: 32px;
+  }
+  .price {
+    font-size: 14px;
+  }
+  .icons img {
+    width: 42px;
+    height: 42px;
+  }
+}
+@media (max-width: 600px) {
+  .container.product-grid {
+    grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr;
+    gap: 20px;
+    padding: 0 16px;
+  }
+  .product-title {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+  .case-title {
+    font-size: 13px;
+  }
+  .case-description {
+    font-size: 11px;
+    min-height: 28px;
+  }
+  .features {
+    font-size: 11px;
+  }
+  .price {
+    font-size: 13px;
+  }
+  .icons img {
+    width: 36px;
+    height: 36px;
+  }
+  .price-icons {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}/*# sourceMappingURL=main.css.map */

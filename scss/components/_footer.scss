@@ -1,0 +1,109 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@use '../variables' as *;
+
+footer {
+  background-color: #fdfcfe;
+  color: #3b2164;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid #ececec;
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-content h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #4c2a85;
+}
+
+.footer-tagline {
+  font-size: 13px;
+  margin: 8px 0 20px;
+  color: #937fbf;
+}
+
+.footer-nav {
+  margin: 15px 0;
+}
+
+.footer-nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #4c2a85;
+  font-weight: 500;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #6f4fc2;
+}
+
+.footer-socials {
+  margin: 20px 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px; 
+  -ms-flex-wrap: wrap; 
+      flex-wrap: wrap;
+}
+
+.footer-socials a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: #4c2a85;
+  font-weight: 500;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #6f4fc2;
+  text-decoration: underline;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.footer-copy {
+  margin-top: 25px;
+  font-size: 12px;
+  color: #999;
+}
+
+.footer-made {
+  font-size: 12px;
+  color: #c1a9e8;
+  margin-top: 4px;
+  font-style: italic;
+}
+.footer-socials a:hover .icon {
+  opacity: 0.8;
+}

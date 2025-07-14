@@ -1,0 +1,18 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@use 'variables' as *;
+@use 'base';
+
+@use 'components/header';
+@use 'components/footer';
+@use 'components/home';
+@use 'components/about';
+@use 'components/services';
+@use 'components/register';
+@use 'components/cart';
+@use 'components/product';

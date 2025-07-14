@@ -1,0 +1,65 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.wishlist-carousel-section {
+  background: #f8f5fc;
+  padding: 60px 0;
+
+  .carousel {
+    max-width: 400px;
+    margin: 0 auto;
+
+    img {
+      border-radius: 12px;
+      -o-object-fit: cover;
+         object-fit: cover;
+      height: 480px;
+    }
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: #9f7aea;
+    border-radius: 50%;
+  }
+
+  .wishlist-form {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 30px;
+
+    .phone-input {
+      padding: 10px 16px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    .btn-buy {
+      background-color: #6b21a8;
+      color: #fff;
+      padding: 10px 20px;
+      font-weight: 600;
+      border-radius: 10px;
+      border: none;
+      -webkit-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        background-color: #581c87;
+      }
+    }
+  }
+}
+.wishlist-heading {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  color: #6b21a8; 
+  margin-bottom: 30px;
+}
