@@ -1,0 +1,59 @@
+{% extends "base.html" %} {% block title %}Wishlist — Luna Case{% endblock %} {%
+block content %}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h1 class="h4 mb-0">🌙 Your Wishlist</h1>
+  <a class="btn btn-outline-secondary btn-sm" href="{{ url_for('products') }}"
+    >← Back</a
+  >
+</div>
+
+{% if items and items|length > 0 %}
+<div class="row g-3">
+  {% for it in items %}
+  <div class="col-12 col-md-6 col-lg-4">
+    <div class="bg-white border rounded-4 p-3 shadow-sm h-100">
+      <img
+        src="{{ url_for('static', filename='images/' ~ it.img) }}"
+        alt="{{ it.title }}"
+        class="w-100 rounded-4 mb-3"
+        style="height: 260px; object-fit: cover"
+      />
+
+      <div class="d-flex justify-content-between align-items-start">
+        <div>
+          <h3 class="h6 mb-1">{{ it.title }}</h3>
+          <small class="text-muted">Saved</small>
+        </div>
+        <span class="badge bg-dark">₾{{ it.price }}</span>
+      </div>
+
+      <div class="d-flex justify-content-between align-items-center mt-3">
+        <form method="POST" action="{{ url_for('cart_add') }}">
+          <input type="hidden" name="img" value="{{ it.img }}" />
+          <input type="hidden" name="title" value="{{ it.title }}" />
+          <input type="hidden" name="price" value="{{ it.price }}" />
+          <button type="submit" class="btn btn-dark btn-sm">Add to Cart</button>
+        </form>
+
+        <form
+          method="POST"
+          action="{{ url_for('wishlist_remove', item_id=it.id) }}"
+        >
+          <button type="submit" class="btn btn-outline-danger btn-sm">
+            Remove
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% else %}
+<div class="bg-white border rounded-4 p-4 shadow-sm text-center">
+  <p class="mb-2">Your wishlist is empty.</p>
+  <a href="{{ url_for('products') }}" class="btn btn-dark btn-sm"
+    >Go to Products</a
+  >
+</div>
+{% endif %} {% endblock %}

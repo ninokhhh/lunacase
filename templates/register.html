@@ -1,0 +1,36 @@
+{% extends "base.html" %} {% block title %}Register - Luna Case{% endblock %} {%
+block content %}
+<div class="register-page">
+  <div class="container">
+    <a
+      href="{{ url_for('home') }}"
+      class="back-btn"
+      aria-label="Back to homepage"
+      >←</a
+    >
+  </div>
+
+  <main class="main">
+    <div class="form-container">
+      <img
+        src="{{ url_for('static', filename='images/loo.png') }}"
+        alt="Create Account"
+        class="register-header"
+      />
+
+      <form method="post" novalidate>
+        {{ form.hidden_tag() }} {{ form.full_name(class="form-control",
+        placeholder="Full Name") }} {{ form.email(class="form-control",
+        placeholder="Email") }} {{ form.password(class="form-control",
+        placeholder="Password") }} {{ form.submit(class="btn btn-primary w-100")
+        }}
+      </form>
+
+      <p class="login-link">
+        Already have an account?
+        <a href="{{ url_for('login') }}">Login here</a>
+      </p>
+    </div>
+  </main>
+</div>
+{% endblock %}

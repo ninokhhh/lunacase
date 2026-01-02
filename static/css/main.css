@@ -10,18 +10,6 @@
 * Autoprefixer: v10.4.7
 * Browsers: last 4 version
 */
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
 * {
   box-sizing: border-box;
 }
@@ -29,23 +17,28 @@
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
-  background: linear-gradient(180deg, #EDE7F6 0%, #FFFFFF 100%);
-  color: #4B2E83;
+  background: linear-gradient(180deg, #ede7f6 0%, #ffffff 100%);
+  color: #4b2e83;
   line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Playfair Display", serif;
-  color: #3A1E6E;
+  color: #3a1e6e;
   margin-top: 0;
 }
 
 a {
-  color: #4B2E83;
+  color: #4b2e83;
   text-decoration: none;
 }
 a:hover {
-  color: #3A1E6E;
+  color: #3a1e6e;
 }
 
 p {
@@ -225,12 +218,6 @@ p {
 * Autoprefixer: v10.4.7
 * Browsers: last 4 version
 */
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
 footer {
   background-color: #fdfcfe;
   color: #3b2164;
@@ -326,14 +313,12 @@ footer {
 * Autoprefixer: v10.4.7
 * Browsers: last 4 version
 */
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
 .hero {
-  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/first.PNG") center/cover no-repeat;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("../images/first.PNG") center/cover no-repeat;
   height: 80vh;
   display: flex;
   align-items: center;
@@ -372,125 +357,80 @@ footer {
   transition: background-color 0.3s ease;
 }
 .hero-content .btn:hover {
-  background-color: #311e56;
+  background-color: rgb(49.0677966102, 30.0949152542, 85.7050847458);
 }
 .hero-content .btn:active {
-  background-color: #563596;
+  background-color: rgb(85.8050847458, 52.6271186441, 149.8728813559);
 }
 
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-body {
-  margin: 0;
-  font-family: "Helvetica Neue", sans-serif;
-  background-color: #faf8fc;
-  color: #2d2d2d;
+.upload {
+  padding: 40px 0 60px;
 }
-
-.about-container {
-  max-width: 700px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-.back-btn {
-  background: none;
-  border: none;
-  font-size: 16px;
-  color: #5e44f4;
-  cursor: pointer;
-  margin-bottom: 20px;
-}
-
-.founder-photo {
-  width: 100%;
-  max-height: 400px;
-  -o-object-fit: cover;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 30px;
-}
-
-.about-title {
+.upload__title {
   font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #1d1d1d;
-}
-
-.about-highlight {
-  font-size: 20px;
-  font-weight: 800;
-  color: #111;
-  margin-bottom: 15px;
-}
-
-.about-text {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #333;
-  margin-bottom: 40px;
-}
-
-.connect-section {
-  background-color: #f3f0fa;
-  padding: 25px;
-  border-radius: 10px;
-  margin-bottom: 40px;
   text-align: center;
+  margin-bottom: 8px;
+}
+.upload__subtitle {
+  text-align: center;
+  opacity: 0.8;
+  margin-bottom: 28px;
+}
+.upload__grid {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+.upload__panel,
+.upload .preview {
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 22px;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 
-.connect-section h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #222;
+.field {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0 10px;
+}
+.field select {
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 0 12px;
 }
 
-.connect-section a {
-  color: #5e44f4;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 5px;
-  transition: all 0.3s ease;
+.preview__title {
+  margin-bottom: 14px;
+}
+.preview__caption {
+  text-align: center;
+  margin-top: 10px;
+  opacity: 0.8;
 }
 
-.connect-section a:hover {
-  color: #3d2ac4;
-  text-decoration: underline;
+.phone {
+  width: min(360px, 100%);
+  margin: 0 auto;
 }
 
-.connect-section i {
-  margin-right: 6px;
-  font-size: 18px;
-  vertical-align: middle;
+.phone__base {
+  width: 100%;
+  height: auto;
+  display: block;
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 
-.reviews-section h3 {
-  font-size: 22px;
-  margin-bottom: 20px;
-  color: #1d1d1d;
+@media (max-width: 900px) {
+  .upload__grid {
+    grid-template-columns: 1fr;
+  }
 }
-
-.review {
-  margin-bottom: 25px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #e4e4e4;
-}
-
-.review p {
-  font-size: 17px;
-  margin: 0 0 5px 0;
-}
-
-.review span {
-  color: #777;
-  font-size: 15px;
-}
-
 /*
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.4.14,
@@ -588,28 +528,31 @@ body {
   display: flex;
   flex-direction: column;
 }
-.register-page .form-container form input {
+.register-page .form-container form .form-control {
   width: 100%;
   padding: 12px;
   margin: 8px 0;
   border: 1px solid #ddd;
   border-radius: 6px;
   font-size: 14px;
+  box-shadow: none;
 }
-.register-page .form-container form button {
-  width: 100%;
-  padding: 12px;
+.register-page .form-container form .form-control:focus {
+  border-color: #6c2bd9;
+  box-shadow: 0 0 0 0.15rem rgba(108, 43, 217, 0.25);
+}
+.register-page .form-container form .btn {
   margin-top: 12px;
   background-color: #4b2e83;
-  color: white;
   border: none;
   border-radius: 6px;
   font-weight: 600;
   font-size: 15px;
+  padding: 12px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.register-page .form-container form button:hover {
+.register-page .form-container form .btn:hover {
   background-color: #3c2570;
 }
 .register-page .form-container .login-link {
@@ -621,6 +564,9 @@ body {
   color: #4b2e83;
   text-decoration: none;
 }
+.register-page .form-container .login-link a:hover {
+  text-decoration: underline;
+}
 
 .back-btn {
   font-size: 28px;
@@ -630,49 +576,30 @@ body {
   margin-left: 20px;
 }
 
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-body {
-  background: #f4ebff;
-  font-family: "Segoe UI", sans-serif;
-}
-
 .cart-container {
-  max-width: 500px;
-  margin: 40px auto;
-  background: white;
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+  max-width: 100%;
 }
 
-.back-btn {
-  background: none;
-  border: none;
-  color: #6c2bd9;
-  font-size: 16px;
-  margin-bottom: 20px;
-  cursor: pointer;
-  padding: 0;
+.cart-preview {
+  height: 380px;
+  background: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.cart-title {
-  text-align: center;
-  font-size: 32px;
-  font-weight: bold;
-  color: #2b2b2b;
-  margin-bottom: 30px;
+.cart-preview-img {
+  height: 380px;
+  width: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center;
+  object-position: center;
+  display: block;
 }
 
 .carousel-inner img {
   border-radius: 15px;
-  height: 420px;
-  -o-object-fit: cover;
-  object-fit: cover;
 }
 
 .carousel-control-prev-icon,
@@ -680,29 +607,6 @@ body {
   background-color: #b48cf4;
   border-radius: 50%;
   background-size: 60% 60%;
-}
-
-.case-info {
-  margin-top: 25px;
-}
-
-.case-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.case-name {
-  font-size: 20px;
-  font-weight: 600;
-  margin: 0;
-}
-
-.case-price {
-  font-size: 24px;
-  font-weight: bold;
-  color: #000;
 }
 
 .form-control {
@@ -717,54 +621,10 @@ body {
   box-shadow: 0 0 0 0.15rem rgba(108, 43, 217, 0.25);
 }
 
-.case-footer {
-  font-size: 16px;
-  margin-top: 10px;
-  font-weight: 500;
-}
-
-.total-price {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.continue-link {
-  color: #6c2bd9;
-  text-decoration: none;
-  font-weight: 500;
-}
-.continue-link:hover {
-  text-decoration: underline;
-}
-
-.checkout-btn {
-  background-color: #6c2bd9;
-  border: none;
-  border-radius: 12px;
-  padding: 10px 25px;
-  font-size: 16px;
-  font-weight: 500;
-  color: white;
-  transition: background-color 0.3s ease;
-}
-.checkout-btn:hover {
-  background-color: #5819b4;
-}
-
 @media (max-width: 576px) {
-  .cart-container {
-    padding: 20px;
-  }
-  .carousel-inner img {
+  .cart-preview,
+  .cart-preview-img {
     height: 300px;
-  }
-  .checkout-btn {
-    width: 100%;
-    margin-top: 10px;
-  }
-  .case-footer {
-    flex-direction: column;
-    align-items: flex-start;
   }
 }
 /*
@@ -937,4 +797,4 @@ body {
     align-items: flex-start;
     gap: 10px;
   }
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */

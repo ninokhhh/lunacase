@@ -9,15 +9,9 @@
   background-color: #f6f4fa;
 
   .main {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     padding: 40px 20px;
     min-height: calc(100vh - 250px);
     background-color: #f6f4fa;
@@ -27,15 +21,14 @@
     background: #fff;
     padding: 30px;
     border-radius: 12px;
-    -webkit-box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
     width: 100%;
     max-width: 400px;
 
     .register-header {
       max-width: 100%;
       display: block;
-      margin: 0 auto 10px auto; 
+      margin: 0 auto 10px auto;
     }
 
     h2 {
@@ -46,36 +39,33 @@
     }
 
     form {
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
+      flex-direction: column;
 
-      input {
+      .form-control {
         width: 100%;
         padding: 12px;
         margin: 8px 0;
         border: 1px solid #ddd;
         border-radius: 6px;
         font-size: 14px;
+        box-shadow: none;
+
+        &:focus {
+          border-color: #6c2bd9;
+          box-shadow: 0 0 0 0.15rem rgba(108, 43, 217, 0.25);
+        }
       }
 
-      button {
-        width: 100%;
-        padding: 12px;
+      .btn {
         margin-top: 12px;
         background-color: #4b2e83;
-        color: white;
         border: none;
         border-radius: 6px;
         font-weight: 600;
         font-size: 15px;
+        padding: 12px;
         cursor: pointer;
-        -webkit-transition: background-color 0.3s ease;
-        -o-transition: background-color 0.3s ease;
         transition: background-color 0.3s ease;
 
         &:hover {
@@ -92,11 +82,14 @@
       a {
         color: #4b2e83;
         text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
 }
-
 
 .back-btn {
   font-size: 28px;

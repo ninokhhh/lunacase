@@ -1,0 +1,236 @@
+{% extends "base.html" %} {% block title %}Luna Case - Products{% endblock %} {%
+block content %}
+
+<section class="product-section">
+  <h2 class="product-title">🌙 Luna Picks</h2>
+
+  <div class="container product-grid">
+    <div class="product-card">
+      <div id="zodiacCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="{{ url_for('static', filename='images/1.PNG') }}"
+              alt="Zodiac Case 1"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="{{ url_for('static', filename='images/2.PNG') }}"
+              alt="Zodiac Case 2"
+            />
+          </div>
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#zodiacCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#zodiacCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+
+      <div class="product-info">
+        <h3 class="case-title">🔮 Zodiac Case Set</h3>
+        <p class="case-description">
+          Let your zodiac shine 🌙 — bold, mystical & truly yours.<br />
+          ✨ Our exclusive design, only at Luna Case.
+        </p>
+        <ul class="features">
+          <li>💜 Soft-touch • Slim & protective • Premium quality</li>
+          <li>📱 Fits all models — iPhone & Android</li>
+        </ul>
+
+        <div class="price-icons">
+          <span class="price">₾45</span>
+
+          <div class="icons">
+            <form
+              method="POST"
+              action="{{ url_for('wishlist_add') }}"
+              style="display: inline"
+            >
+              <input type="hidden" name="img" value="1.PNG" />
+              <input type="hidden" name="title" value="🔮 Zodiac Case Set" />
+              <input type="hidden" name="price" value="45" />
+              <button
+                type="submit"
+                class="btn p-0 border-0 bg-transparent"
+                title="Add to wishlist"
+              >
+                <img
+                  src="{{ url_for('static', filename='images/wishlist.png') }}"
+                  alt="Wishlist"
+                />
+              </button>
+            </form>
+
+            <form
+              method="POST"
+              action="{{ url_for('cart_add') }}"
+              style="display: inline"
+            >
+              <input type="hidden" name="img" value="1.PNG" />
+              <input type="hidden" name="title" value="🔮 Zodiac Case Set" />
+              <input type="hidden" name="price" value="45" />
+              <button
+                type="submit"
+                class="btn p-0 border-0 bg-transparent"
+                title="Add to cart"
+              >
+                <img
+                  src="{{ url_for('static', filename='images/cart.png') }}"
+                  alt="Cart"
+                />
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% set items = [ {"img":"3.PNG","title":"💘 Straight to the Point","desc":"A
+    bold design inspired by real emotions & fan love.<br />🎵 Words from Tyler,
+    the Creator — Gone, Gone / Thank You","f1":"💗 Soft-touch • Lightweight •
+    Fan-made energy","f2":"📱 Fits all models — iPhone & Android"},
+    {"img":"4.PNG","title":"🌫 Ride Mood Case","desc":"For hearts that feel too
+    much and think too deep.<br />🎵 “I’ve got a war in my mind…” — Lana Del
+    Rey, Ride","f1":"💛 Soft-touch • Dreamy & intense • Premium feel","f2":"📱
+    Fits all models — iPhone & Android"}, {"img":"5.PNG","title":"🖤 Born to Die
+    Case","desc":"Dark, iconic & poetic — made for true Lana Del Rey fans.<br />🎵
+    Inspired by the Born to Die album aesthetic","f1":"🖤 Soft-touch • Moody
+    design • Premium quality","f2":"📱 Fits all models — iPhone & Android"},
+    {"img":"6.PNG","title":"🌘 After Hours Case","desc":"For the night souls who
+    live in The Weeknd’s world.<br />🎵 Inspired by the After Hours
+    album","f1":"🖤 Sleek look • Deep tones • Fan favorite","f2":"📱 Fits all
+    models — iPhone & Android"}, {"img":"7.PNG","title":"🌿 National Anthem
+    Case","desc":"Warm tones & dreamy lyrics for true romantics.<br />🎵
+    Inspired by Lana Del Rey’s National Anthem","f1":"💛 Soft-touch •
+    Lightweight • Fan-favorite look","f2":"📱 Fits all models — iPhone &
+    Android"}, {"img":"8.PNG","title":"⭐ Starboy Case","desc":"Vibrant tribute
+    to The Weeknd’s iconic album.<br />🎵 Inspired by the Starboy era","f1":"✨
+    Bold red • High energy • Iconic look","f2":"📱 Fits all models — iPhone &
+    Android"}, {"img":"9.PNG","title":"🧡 Save Your Tears","desc":"Soft orange
+    vibe to feel it all, and heal.<br />🎵 Inspired by Save Your Tears — The
+    Weeknd","f1":"🧡 Smooth finish • Gentle energy • Fan design","f2":"📱 Fits
+    all models — iPhone & Android"}, {"img":"10.PNG","title":"🐻 Forest
+    Bear","desc":"Country-style cuteness with cozy green tone.<br />🍃 Handmade
+    by our Luna community","f1":"💚 Unique color • Fan-made design • Soft
+    style","f2":"📱 Fits all models — iPhone & Android"},
+    {"img":"11.PNG","title":"❤️ Berry Bear","desc":"Sweet red vibes with playful
+    spirit.<br />🎨 Designed by our Luna Case fans","f1":"❤️ Bright tone • Cute
+    & bold • Handmade","f2":"📱 Fits all models — iPhone & Android"},
+    {"img":"12.PNG","title":"🖤 Tuxedo Bear","desc":"Classy & cute with a dark
+    twist.<br />✨ Custom design by a Luna Case customer","f1":"🖤 Elegant black
+    • Fan-designed • Playful","f2":"📱 Fits all models — iPhone & Android"},
+    {"img":"13.PNG","title":"💙 Dreamy Bear","desc":"Peaceful, soft & magical
+    like a bedtime story.<br />🧸 Made by our sweetest customers","f1":"💙 Calm
+    tones • Fan-made • Dream design","f2":"📱 Fits all models — iPhone &
+    Android"}, {"img":"14.PNG","title":"🧸🌸 Teddy in Pink","desc":"A pastel
+    teddy in full bloom — cozy charm with premium finish.","f1":"✨ Custom
+    design by a Luna Case customer","f2":"📱 Fits all models — iPhone &
+    Android"}, {"img":"15.PNG","title":"🐆💙 Spotted Cat","desc":"Bold, wild and
+    graphic — a feline statement.","f1":"✨ Custom design by a Luna Case
+    customer","f2":"📱 Fits all models — iPhone & Android"},
+    {"img":"16.PNG","title":"🐯⚪💙 Blue-Striped Cat","desc":"Striped elegance
+    in cream and cobalt — sleek and striking.","f1":"✨ Custom design by a Luna
+    Case customer","f2":"📱 Fits all models — iPhone & Android"},
+    {"img":"17.PNG","title":"🖤😎 But My Mom Says I’m Cool","desc":"Deadpan
+    minimalism with a hint of irony — cool confidence.","f1":"✨ Custom design
+    by a Luna Case customer","f2":"🖤 Matte Finish | 📱 iPhone & Android"},
+    {"img":"18.PNG","title":"🍒🎶✨ Cherry Bomb","desc":"Retro pop meets modern
+    sass — sweet but bold.","f1":"✨ Custom design by a Luna Case
+    customer","f2":"🌟 Gloss Print | 📱 iPhone & Android"},
+    {"img":"19.PNG","title":"💄😉👑 Barbie Wink","desc":"A bold wink from the
+    it-girl icon — unapologetically you.","f1":"✨ Custom design by a Luna Case
+    customer","f2":"💋 HD Gloss Print | 📱 iPhone & Android"},
+    {"img":"20.PNG","title":"👼💗🌟 Angel Energy","desc":"Puffy pink in playful
+    3D — energy that glows.","f1":"✨ Custom design by a Luna Case
+    customer","f2":"🌈 Puffy 3D Print | 📱 iPhone & Android"},
+    {"img":"21.PNG","title":"💜✨🌸 Self Love Babygirl","desc":"Self-love mantra
+    in soft lilac — minimalist and bold.","f1":"✨ Custom design by a Luna Case
+    customer","f2":"🎀 Matte Soft-touch | 📱 iPhone & Android"},
+    {"img":"22.PNG","title":"🌙 Midnight Aesthetic","desc":"Minimal dark
+    aesthetic inspired by night moods — clean, calm, and classy.","f1":"✨
+    Custom design by a Luna Case customer","f2":"📱 Fits all models — iPhone &
+    Android"}, {"img":"23.PNG","title":"🌌 Cosmic Dream","desc":"Soft cosmic
+    tones for dreamers & stargazers — dreamy vibe, premium feel.","f1":"✨
+    Custom design by a Luna Case customer","f2":"📱 Fits all models — iPhone &
+    Android"} ] %} {% for p in items %}
+    <div class="product-card">
+      <img
+        src="{{ url_for('static', filename='images/' ~ p.img) }}"
+        alt="{{ p.title }}"
+      />
+
+      <div class="product-info">
+        <h3 class="case-title">{{ p.title }}</h3>
+        <p class="case-description">{{ p.desc | safe }}</p>
+
+        <ul class="features">
+          <li>{{ p.f1 }}</li>
+          <li>{{ p.f2 }}</li>
+        </ul>
+
+        <div class="price-icons">
+          <span class="price">₾45</span>
+
+          <div class="icons">
+            <form
+              method="POST"
+              action="{{ url_for('wishlist_add') }}"
+              style="display: inline"
+            >
+              <input type="hidden" name="img" value="{{ p.img }}" />
+              <input type="hidden" name="title" value="{{ p.title }}" />
+              <input type="hidden" name="price" value="45" />
+              <button
+                type="submit"
+                class="btn p-0 border-0 bg-transparent"
+                title="Add to wishlist"
+              >
+                <img
+                  src="{{ url_for('static', filename='images/wishlist.png') }}"
+                  alt="Wishlist"
+                />
+              </button>
+            </form>
+
+            <form
+              method="POST"
+              action="{{ url_for('cart_add') }}"
+              style="display: inline"
+            >
+              <input type="hidden" name="img" value="{{ p.img }}" />
+              <input type="hidden" name="title" value="{{ p.title }}" />
+              <input type="hidden" name="price" value="45" />
+              <button
+                type="submit"
+                class="btn p-0 border-0 bg-transparent"
+                title="Add to cart"
+              >
+                <img
+                  src="{{ url_for('static', filename='images/cart.png') }}"
+                  alt="Cart"
+                />
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% endblock %}

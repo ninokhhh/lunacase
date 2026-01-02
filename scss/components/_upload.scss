@@ -1,0 +1,74 @@
+.upload {
+  padding: 40px 0 60px;
+
+  &__title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  &__subtitle {
+    text-align: center;
+    opacity: 0.8;
+    margin-bottom: 28px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 28px;
+    align-items: start;
+  }
+
+  &__panel,
+  .preview {
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    padding: 22px;
+    backdrop-filter: blur(8px);
+  }
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0 10px;
+
+  select {
+    height: 42px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 0 12px;
+  }
+}
+
+.preview {
+  &__title {
+    margin-bottom: 14px;
+  }
+
+  &__caption {
+    text-align: center;
+    margin-top: 10px;
+    opacity: 0.8;
+  }
+}
+
+.phone {
+  width: min(360px, 100%);
+  margin: 0 auto;
+}
+
+.phone__base {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+@media (max-width: 900px) {
+  .upload__grid {
+    grid-template-columns: 1fr;
+  }
+}

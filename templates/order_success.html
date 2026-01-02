@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block title %}Order Success — Luna Case{% endblock
+%} {% block content %}
+
+<div class="bg-white border rounded-4 p-4 shadow-sm text-center">
+  <h1 class="h4 mb-2">✅ Order placed!</h1>
+  <p class="text-muted mb-3">
+    Your order number is <strong>#{{ order.id }}</strong>.
+  </p>
+
+  <div class="d-flex justify-content-center gap-2">
+    <a class="btn btn-dark" href="{{ url_for('products') }}"
+      >Back to Products</a
+    >
+    <a class="btn btn-outline-secondary" href="{{ url_for('home') }}">Home</a>
+  </div>
+</div>
+
+{% endblock %}

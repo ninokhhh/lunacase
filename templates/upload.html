@@ -1,0 +1,100 @@
+{% extends "base.html" %} {% block title %}Upload - Luna Case{% endblock %} {%
+block content %}
+
+<main class="upload py-5">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h1 class="display-6 fw-semibold">Choose Your Phone Model</h1>
+    </div>
+
+    <div class="row g-4 align-items-stretch">
+      <div class="col-lg-4">
+        <div
+          class="p-4 rounded-4 border bg-white bg-opacity-75 shadow-sm"
+          style="backdrop-filter: blur(8px)"
+        >
+          <h2 class="h5 fw-semibold mb-3">Upload Menu</h2>
+
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2">• iPhone 15 Pro Max mockup</li>
+            <li class="mb-2">• iPhone 16 mockup</li>
+            <li class="mb-2">• iPhone 17 Pro mockup</li>
+          </ul>
+
+          <hr class="my-4" />
+
+          <a href="{{ url_for('products') }}" class="btn btn-primary w-100">
+            Go to Products
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-8">
+        <div
+          class="p-4 rounded-4 border bg-white bg-opacity-75 shadow-sm"
+          style="backdrop-filter: blur(8px)"
+        >
+          <h2 class="h5 fw-semibold mb-3">Live Preview</h2>
+
+          <div class="row g-3">
+            <div class="col-md-4">
+              <div
+                class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden"
+              >
+                <div class="p-3 text-center bg-light">
+                  <img
+                    src="{{ url_for('static', filename='images/phones/15max.PNG') }}"
+                    alt="iPhone 15 Pro Max"
+                    style="max-width: 100%; height: 280px; object-fit: contain"
+                  />
+                </div>
+                <div class="card-body text-center">
+                  <div class="fw-semibold">iPhone 15 Pro Max</div>
+                  <div class="text-muted small">Mockup view</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div
+                class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden"
+              >
+                <div class="p-3 text-center bg-light">
+                  <img
+                    src="{{ url_for('static', filename='images/phones/16ip.PNG') }}"
+                    alt="iPhone 16"
+                    style="max-width: 100%; height: 280px; object-fit: contain"
+                  />
+                </div>
+                <div class="card-body text-center">
+                  <div class="fw-semibold">iPhone 16</div>
+                  <div class="text-muted small">Mockup view</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div
+                class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden"
+              >
+                <div class="p-3 text-center bg-light">
+                  <img
+                    src="{{ url_for('static', filename='images/phones/17pro.PNG') }}"
+                    alt="iPhone 17 Pro"
+                    style="max-width: 100%; height: 280px; object-fit: contain"
+                  />
+                </div>
+                <div class="card-body text-center">
+                  <div class="fw-semibold">iPhone 17 Pro</div>
+                  <div class="text-muted small">Mockup view</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

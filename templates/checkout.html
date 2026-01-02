@@ -1,0 +1,82 @@
+{% extends "base.html" %} {% block title %}Checkout — Luna Case{% endblock %} {%
+block content %}
+
+<div class="row g-4">
+  <div class="col-lg-7">
+    <div class="bg-white border rounded-4 p-4 shadow-sm">
+      <h1 class="h5 mb-3">Delivery Details</h1>
+
+      <form method="POST" class="row g-3">
+        <div class="col-12">
+          <label class="form-label">Phone model</label>
+          <input
+            class="form-control"
+            name="phone_model"
+            placeholder="e.g. iPhone 14 Pro"
+            required
+          />
+        </div>
+
+        <div class="col-12">
+          <label class="form-label">Address</label>
+          <input
+            class="form-control"
+            name="address"
+            placeholder="Street, building, apartment"
+            required
+          />
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">City</label>
+          <input
+            class="form-control"
+            name="city"
+            placeholder="Tbilisi"
+            required
+          />
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Phone number</label>
+          <input
+            class="form-control"
+            name="phone_number"
+            placeholder="+995..."
+            required
+          />
+        </div>
+
+        <div
+          class="col-12 d-flex justify-content-between align-items-center mt-2"
+        >
+          <a href="{{ url_for('cart') }}" class="text-decoration-none"
+            >← Back to cart</a
+          >
+          <button class="btn btn-dark" type="submit">Place order</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="col-lg-5">
+    <div class="bg-white border rounded-4 p-4 shadow-sm">
+      <h2 class="h6 mb-3">Order Summary</h2>
+
+      {% for it in items %}
+      <div class="d-flex justify-content-between small mb-2">
+        <span>{{ it.title }} × {{ it.quantity }}</span>
+        <span>₾{{ it.price * it.quantity }}</span>
+      </div>
+      {% endfor %}
+
+      <hr />
+      <div class="d-flex justify-content-between">
+        <span class="fw-semibold">Total</span>
+        <span class="fw-bold">₾{{ total }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

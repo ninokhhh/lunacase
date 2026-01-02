@@ -5,7 +5,7 @@
 * Browsers: last 4 version
 */
 
-@use '../variables' as *;
+@use 'variables' as *;
 
 .hero {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))),
