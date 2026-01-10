@@ -1,12 +1,11 @@
-/* CART PAGE */
+
 
 .cart-container {
-  // შენთან max-width 500px ძალიან პატარა იყო desktop-ზე
-  // ამიტომ გავხადე responsive, მაგრამ მაინც "ლამაზად ჩაჯდება"
+  
   max-width: 100%;
 }
 
-/* Preview area that holds the image */
+
 .cart-preview {
   height: 380px;
   background: #f3f3f3;
@@ -15,7 +14,7 @@
   justify-content: center;
 }
 
-/* Image: contain so it fits inside frame */
+
 .cart-preview-img {
   height: 380px;
   width: 100%;
@@ -24,12 +23,12 @@
   display: block;
 }
 
-/* IMPORTANT: override generic carousel image rule if you have it elsewhere */
+
 .carousel-inner img {
   border-radius: 15px;
 }
 
-/* controls styling */
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-color: #b48cf4;
@@ -37,7 +36,7 @@
   background-size: 60% 60%;
 }
 
-/* nicer inputs */
+
 .form-control {
   border-radius: 12px;
   border: 1px solid #ddd;

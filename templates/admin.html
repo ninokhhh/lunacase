@@ -1,7 +1,6 @@
 {% extends "base.html" %} {% block title %}Admin Panel - Luna Case{% endblock %}
 {% block content %}
 <div class="container py-4">
-  <!-- Header -->
   <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
     <div>
       <h2 class="mb-1">Admin Panel</h2>
@@ -17,7 +16,6 @@
     </div>
   </div>
 
-  <!-- Quick stats -->
   <div class="row g-3 mb-4">
     <div class="col-12 col-md-4">
       <div class="card shadow-sm">
@@ -61,7 +59,6 @@
     </div>
   </div>
 
-  <!-- Tabs -->
   <ul class="nav nav-tabs mb-3" id="adminTabs" role="tablist">
     <li class="nav-item" role="presentation">
       <button
@@ -94,7 +91,6 @@
   </ul>
 
   <div class="tab-content" id="adminTabsContent">
-    <!-- ORDERS TAB -->
     <div
       class="tab-pane fade show active"
       id="orders"
@@ -228,7 +224,6 @@
       </div>
     </div>
 
-    <!-- USERS TAB -->
     <div
       class="tab-pane fade"
       id="users"
