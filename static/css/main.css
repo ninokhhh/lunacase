@@ -17,28 +17,23 @@
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
-  background: linear-gradient(180deg, #ede7f6 0%, #ffffff 100%);
-  color: #4b2e83;
+  background: linear-gradient(180deg, #EDE7F6 0%, #FFFFFF 100%);
+  color: #4B2E83;
   line-height: 1.6;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", serif;
-  color: #3a1e6e;
+  color: #3A1E6E;
   margin-top: 0;
 }
 
 a {
-  color: #4b2e83;
+  color: #4B2E83;
   text-decoration: none;
 }
 a:hover {
-  color: #3a1e6e;
+  color: #3A1E6E;
 }
 
 p {
@@ -314,11 +309,7 @@ footer {
 * Browsers: last 4 version
 */
 .hero {
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.7),
-      rgba(255, 255, 255, 0.7)
-    ),
-    url("../images/first.PNG") center/cover no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/first.PNG") center/cover no-repeat;
   height: 80vh;
   display: flex;
   align-items: center;
@@ -389,7 +380,7 @@ footer {
   border-radius: 16px;
   padding: 22px;
   -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
 }
 
 .field {
@@ -423,7 +414,7 @@ footer {
   height: auto;
   display: block;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
 }
 
 @media (max-width: 900px) {
@@ -592,9 +583,9 @@ footer {
   height: 380px;
   width: 100%;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
   -o-object-position: center;
-  object-position: center;
+     object-position: center;
   display: block;
 }
 
@@ -797,4 +788,4 @@ footer {
     align-items: flex-start;
     gap: 10px;
   }
-} /*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
