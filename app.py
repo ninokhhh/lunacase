@@ -1,22 +1,14 @@
 from flask import Flask, render_template, redirect, url_for, flash, request, abort
-from flask_login import (
-    login_user,
-    logout_user,
-    login_required,
-    current_user,
-)
+from flask_login import login_user, logout_user, login_required, current_user
 from extensions import db, login_manager
-from forms import RegisterForm, LoginForm
-from models import User, WishlistItem, CartItem, Order, OrderItem
-
-
+from forms import RegisterForm, LoginForm, ProductForm
+from models import User, WishlistItem, CartItem, Order, OrderItem, Product
 
 DEFAULT_ADMIN_EMAIL = "admin@lunacase.com"
 DEFAULT_ADMIN_PASSWORD = "Admin123!"
 
 
 def admin_required(view_func):
-    
     from functools import wraps
 
     @wraps(view_func)
@@ -34,20 +26,26 @@ def ensure_default_admin():
    
     existing_admin = User.query.filter_by(is_admin=True).first()
     if existing_admin:
-        return
+        return  
 
-   
+    
     u = User.query.filter_by(email=DEFAULT_ADMIN_EMAIL.lower().strip()).first()
     if u:
         u.is_admin = True
         db.session.commit()
+        print("Default admin activated ✅")
         return
 
     
-    admin_user = User(full_name="Admin", email=DEFAULT_ADMIN_EMAIL.lower().strip(), is_admin=True)
+    admin_user = User(
+        full_name="Admin",
+        email=DEFAULT_ADMIN_EMAIL.lower().strip(),
+        is_admin=True
+    )
     admin_user.set_password(DEFAULT_ADMIN_PASSWORD)
     db.session.add(admin_user)
     db.session.commit()
+    print("Default admin created ✅")
 
 
 def create_app():
@@ -63,27 +61,27 @@ def create_app():
     login_manager.login_view = "login"
     login_manager.login_message_category = "info"
 
+   
     @app.route("/")
     def home():
         return render_template("index.html")
 
     @app.route("/products")
     def products():
-        return render_template("product.html")
+        products = Product.query.order_by(Product.created_at.desc()).all()
+        return render_template("product.html", products=products)
 
+   
     @app.route("/upload")
     @login_required
     def upload():
         return render_template("upload.html")
 
+    
     @app.route("/cart")
     @login_required
     def cart():
-        items = (
-            CartItem.query.filter_by(user_id=current_user.id)
-            .order_by(CartItem.created_at.desc())
-            .all()
-        )
+        items = CartItem.query.filter_by(user_id=current_user.id).order_by(CartItem.created_at.desc()).all()
         total = sum((it.price or 0) * (it.quantity or 1) for it in items)
         return render_template("cart.html", items=items, total=total)
 
@@ -146,14 +144,11 @@ def create_app():
         db.session.commit()
         return redirect(url_for("cart"))
 
+   
     @app.route("/wishlist")
     @login_required
     def wishlist():
-        items = (
-            WishlistItem.query.filter_by(user_id=current_user.id)
-            .order_by(WishlistItem.created_at.desc())
-            .all()
-        )
+        items = WishlistItem.query.filter_by(user_id=current_user.id).order_by(WishlistItem.created_at.desc()).all()
         return render_template("wishlist.html", items=items)
 
     @app.route("/wishlist/add", methods=["POST"])
@@ -187,6 +182,7 @@ def create_app():
         flash("Removed from wishlist.", "info")
         return redirect(url_for("wishlist"))
 
+    
     @app.route("/checkout", methods=["GET", "POST"])
     @login_required
     def checkout():
@@ -242,6 +238,7 @@ def create_app():
         order = Order.query.filter_by(id=order_id, user_id=current_user.id).first_or_404()
         return render_template("order_success.html", order=order)
 
+    
     @app.route("/register", methods=["GET", "POST"])
     def register():
         if current_user.is_authenticated:
@@ -291,7 +288,7 @@ def create_app():
         flash("Logged out.", "info")
         return redirect(url_for("home"))
 
-  
+    
     @app.route("/admin")
     @login_required
     @admin_required
@@ -300,6 +297,26 @@ def create_app():
         orders = Order.query.order_by(Order.created_at.desc()).all()
         return render_template("admin.html", users=users, orders=orders)
 
+   
+    @app.route("/admin/products", methods=["GET", "POST"])
+    @login_required
+    @admin_required
+    def admin_products():
+        form = ProductForm()
+        if form.validate_on_submit():
+            product = Product(
+                title=form.title.data.strip(),
+                price=form.price.data,
+                img=form.img.data.strip(),
+            )
+            db.session.add(product)
+            db.session.commit()
+            flash("Product added successfully ✅", "success")
+            return redirect(url_for("admin_products"))
+
+        products = Product.query.order_by(Product.created_at.desc()).all()
+        return render_template("admin_products.html", form=form, products=products)
+
     return app
 
 
@@ -307,8 +324,6 @@ app = create_app()
 
 if __name__ == "__main__":
     with app.app_context():
-        db.create_all()
-       
-        ensure_default_admin()
-
+        db.create_all()          
+        ensure_default_admin()   
     app.run(debug=True)

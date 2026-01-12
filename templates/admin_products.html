@@ -1,0 +1,46 @@
+{% extends "base.html" %} {% block title %}Admin - Products{% endblock %} {%
+block content %}
+<div class="container py-4">
+  <h2>Manage Products</h2>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="mb-3">
+          {{ form.title.label(class="form-label") }} {{
+          form.title(class="form-control") }}
+        </div>
+        <div class="mb-3">
+          {{ form.price.label(class="form-label") }} {{
+          form.price(class="form-control") }}
+        </div>
+        <div class="mb-3">
+          {{ form.img.label(class="form-label") }} {{
+          form.img(class="form-control") }}
+        </div>
+        {{ form.submit(class="btn btn-primary") }}
+      </form>
+    </div>
+  </div>
+
+  <h3>Existing Products</h3>
+  <div class="row">
+    {% for p in products %}
+    <div class="col-md-4">
+      <div class="card mb-3">
+        <img
+          src="{{ url_for('static', filename='images/' ~ p.img) }}"
+          class="card-img-top"
+          alt="{{ p.title }}"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ p.title }}</h5>
+          <p class="card-text">₾{{ p.price }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
